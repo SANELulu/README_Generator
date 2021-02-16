@@ -1,25 +1,25 @@
-// const inquirer = require('inquirer');
-// const fs = require('fs');
-// const util = require('util');
-function generateMarkdown(data){
+
+function generateMarkdown(response){
   
   return `
-  ## my name is ${data.name}
-  ## ${data.title}
+  ## my name is ${response.name}
+  ## ${response.title}
   ## Description
-  ${data.description}
+  ${response.description}
   ## License 
-  ${data.license}
+  ${response.license}
   ## Commands Needed
-  ${data.command}
+  ${response.command}
   ## Need to know
-  ${data.about}
+  ${response.about}
   ## Contributions 
-  ${data.contribute}
+  ${response.contribute}
   ## Contact Me 
-  ${data.github}
-  ${data.email}`
+  ${response.github}
+  ${response.email}
+`
 ;
+
 }
 
 module.exports = generateMarkdown;
