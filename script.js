@@ -35,7 +35,7 @@ const questions = [
         validate: (value)=> { if (value){return true} else {return "Input your description, please."}},
     },
     {
-        type: "checkbox",
+        type: "list",
         message: "What kind of license should your project have?",
         choices: [
             "Apache",
@@ -84,6 +84,7 @@ function writeToFile(filename, data){
 // function to initialize program
 
 function init(){
+    
     inquirer.prompt(questions)
     .then(function(answers){
         const response = generateMarkdown(answers)

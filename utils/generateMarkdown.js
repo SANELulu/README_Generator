@@ -1,31 +1,41 @@
 
 function generateMarkdown(response){
   const { title, name, description, license, command, contribute, github, email, about } = response 
-  return `
+return `
   
-  #${title}
-  ## by ${name}
+# ${title}
+## by ${name}
 _______________________________________________________________
-  ### Description
-  *${description}
+### Description 
+* ${description}
   
-  #### License : 
-  <img src='https://img.shields.io/badge/license-${license}-blue' alt="badge">
+#### License : 
+<img src='https://img.shields.io/badge/license-${license}-blue' alt="license-badge">
   
-  * Info on license: https://opensource.org/licenses/${license}
+* Info on license: https://opensource.org/licenses/${license}
 _______________________________________________________________
-  #### Commands Needed
-  * ${command}
+#### Commands Needed
+* ${command}
 
-  #### Need to know:
-  * ${about}
+#### Need to know:
+* ${about}
 
-  #### Contributions 
-  * ${contribute}
+#### Open to contributions? 
+* ${contribute}
 _______________________________________________________________
-  #### Contact Me 
-  * https://github.com/${github}
-  * ${email}
+### Questions? 
+#### Contact Me \n
+<img src='https://img.shields.io/badge/github-${github}-orange' alt="github-badge">\n
+* https://github.com/${github}
+* ${email}
+
+TABLE OF CONTENTS 
+_______________________________________________________________
+* [Description](#description)
+* [License](#license)
+* [Command](#commands)
+* [Need To Know](#need-to-know)
+* [Questions?](#questions?)
 `
 ;
 
